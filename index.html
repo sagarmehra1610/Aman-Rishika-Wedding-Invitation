@@ -3,6 +3,153 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Aman & Rishika</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700&family=Cormorant:ital,wght@0,300;1,400&family=Cinzel:wght@400;600&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+
+<style>
+:root{
+  --brown:#8C6B3E;
+  --dark:#3E2C23;
+  --sand:#C8A165;
+  --taupe:#A67C52;
+  --olive:#6E5A3C;
+  --cream:#F2E6D8;
+  --parchment:#EADBC8;
+  --white:#FFF8EE;
+}
+
+body{
+  margin:0;
+  font-family:'Lato',sans-serif;
+  background:var(--cream);
+  color:var(--dark);
+  text-align:center;
+}
+
+/* ENTRY SCREEN */
+#entryScreen{
+  position:fixed;
+  inset:0;
+  background:var(--cream);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  transition:1s;
+}
+
+.entry-title{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:50px;
+  color:var(--brown);
+}
+
+#enterBtn{
+  margin-top:20px;
+  padding:12px 30px;
+  border:1px solid var(--sand);
+  background:none;
+  color:var(--brown);
+  cursor:pointer;
+}
+
+/* MUSIC BUTTON */
+#musicBtn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  z-index:999;
+  background:rgba(200,161,101,0.2);
+  border:1px solid var(--sand);
+  padding:10px;
+  cursor:pointer;
+}
+
+/* HERO */
+#hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero-names{
+  font-size:70px;
+  font-family:'Playfair Display',serif;
+  color:var(--brown);
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  background:var(--dark);
+  color:var(--sand);
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENTRY SCREEN -->
+<div id="entryScreen">
+  <div>
+    <h1 class="entry-title">Aman & Rishika</h1>
+    <button id="enterBtn">OPEN INVITATION</button>
+  </div>
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn">🔊 MUSIC</button>
+
+<!-- HERO -->
+<section id="hero">
+  <h1 class="hero-names">Aman & Rishika</h1>
+  <p>request the pleasure of your company</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>
+  “MERE MAAMU KI SHAADI MEIN JALOOL-JALOOL AANA”<br>
+  from VAANI, BAANI & MEHAR
+  </strong></p>
+</footer>
+
+<script>
+const entry = document.getElementById("entryScreen");
+const enterBtn = document.getElementById("enterBtn");
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+enterBtn.onclick = () => {
+  entry.style.display = "none";
+  music.play();
+};
+
+musicBtn.onclick = () => {
+  if(music.paused){
+    music.play();
+    musicBtn.innerHTML="🔇 PAUSE";
+  } else {
+    music.pause();
+    musicBtn.innerHTML="🔊 MUSIC";
+  }
+};
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="referrer" content="no-referrer"/>
 <title>Aman & Rishika — 09.05.2026</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@100;300;400&display=swap" rel="stylesheet"/>
